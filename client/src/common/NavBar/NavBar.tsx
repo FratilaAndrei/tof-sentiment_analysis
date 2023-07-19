@@ -3,8 +3,8 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { AiFillFacebook } from "react-icons/ai";
 import { BsStrava } from "react-icons/bs";
-import logoImg from "../utils/image-removebg-preview.png";
-import LogIn from "./LogIn";
+import logoImg from "../../utils/image-removebg-preview.png";
+import LogIn from "./Login/LogIn";
 
 const NavBar = () => {
   return (

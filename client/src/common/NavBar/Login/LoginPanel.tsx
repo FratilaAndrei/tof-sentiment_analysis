@@ -1,12 +1,12 @@
 import React from "react";
 import { CgClose } from "react-icons/cg";
-import logoImg from "../utils/image-removebg-preview.png";
+import logoImg from "../../../utils/image-removebg-preview.png";
 import {
   AiFillFacebook,
   AiFillGoogleSquare,
   AiFillApple,
 } from "react-icons/ai";
-import LoginInput from "./LoginInput";
+import LoginInput from "../Login/LoginInput";
 import { FC } from "react";
 
 type LoginPanelProps = {

@@ -12,7 +12,7 @@ const LogIn = () => {
   const loginMenu = isLoginMenuOpen === true;
 
   return (
-    <div className=" text-white bg-orange-500 py-1 px-8 rounded-md relative">
+    <div className=" text-white bg-orange-500 py-1 px-8 rounded-md relative z-10">
       <div onClick={toggleLoginMenu}>
         <IoPersonCircle className="absolute -left-4 -top-0.5 bg-orange-600 text-4xl rounded-full" />
         <div>Log In</div>
