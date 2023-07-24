@@ -46,22 +46,24 @@ const Carrousel = () => {
     return jumboVismaRiders.map((rider, index) => (
       <SwiperSlide
         key={index}
-        className="h-full m-auto bg-gradient-to-br from-orange-600 to-yellow-500   object-cover rounded-3xl"
+        className="h-full bg-gradient-to-br from-orange-600 to-yellow-500  object-cover rounded-3xl"
       >
-        <img src={rider.riderImg} alt="" className="h-[300px] m-auto" />
-        <div className="text-center pt-2 text-2xl text-white">{rider.name}</div>
+        <img src={rider.riderImg} alt="" className="h-[80%] m-auto" />
+        <div className="text-center pt-2 text-xl lg:text-2xl text-white h-[20%] flex flex-col justify-center 2xl:text-4xl">
+          {rider.name}
+        </div>
       </SwiperSlide>
     ));
   };
 
   return (
-    <div className="mt-20 mx-20 h-[450px] flex items-center ">
+    <div className="mt-20 mx-20 h-[450px] 2xl:mt-40 2xl:h-[500px] flex items-center ">
       <Swiper
-        className="h-[350px]"
+        className="h-[350px] 2xl:h-[450px]"
         // @ts-ignore
         breakpoints={breakpoints}
         slidesPerView={3} // Now it should work
-        spaceBetween={40}
+        spaceBetween={20}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,

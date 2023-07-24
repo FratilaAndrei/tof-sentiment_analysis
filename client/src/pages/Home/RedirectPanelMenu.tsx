@@ -83,19 +83,21 @@ const RedirectPanelMenu = () => {
   const getRankingRiders = () => {
     return rankingRiders.map((rider, index) => (
       <div
-        className={`flex items-center pl-2 text-sm gap-4 py-2 border-b-4 border-orange-500 ${getLastRankingBorder(
+        className={`2xl:h-[150px] flex items-center pl-2 text-sm gap-4 py-2 border-b-4 border-orange-500 ${getLastRankingBorder(
           index
         )}`}
         key={index}
       >
-        <div className="w-[10%] h-[20px]">
-          <img src={rider.flag} alt="" className="h-full w-full object-fit" />
+        <div className="w-[10%] h-[40%] 2xl:ml-8">
+          <img src={rider.flag} alt="" className="h-full w-full object-cover" />
         </div>
-        <div className="text-start w-[55%]">
-          <div className="font-bold text-sm">{rider.riderName}</div>
-          <div className="line-clamp-1">{rider.team}</div>
+        <div className="text-center lg:text-start w-[55%]">
+          <div className="font-bold text-sm 2xl:text-4xl">
+            {rider.riderName}
+          </div>
+          <div className="line-clamp-1 2xl:text-2xl">{rider.team}</div>
         </div>
-        <div className="w-[35%]">{rider.timeScore}</div>
+        <div className="w-[35%] 2xl:text-3xl">{rider.timeScore}</div>
       </div>
     ));
   };
@@ -104,25 +106,29 @@ const RedirectPanelMenu = () => {
     return panelMenu.map((panel, index) => (
       <div
         key={index}
-        className="w-1/3 bg-contain h-[300px] text-white text-2xl font-bold pt-4 text-center flex flex-col justify-between "
+        className="w-1/3 bg-cover h-[300px] 2xl:h-[600px]  text-white text-2xl font-bold pt-4 text-center flex flex-col justify-between  2xl:text-6xl "
         style={{ backgroundImage: `url(${panel.backgroundImage})` }}
       >
         {panel.label}
-        <div className="bg-gradient-to-br from-orange-500 to-yellow-500 mx-4 py-2 mb-4 opacity-90">
-          <a href={panel.link}>Discover</a>
-        </div>
+        <a href={panel.link}>
+          <div className="bg-gradient-to-br from-orange-500 to-yellow-500 mx-4 py-2 mb-4 2xl:text-4xl 2xl:py-4 2xl: opacity-90">
+            Discover
+          </div>
+        </a>
       </div>
     ));
   };
 
   return (
-    <div className="flex items-center">
-      <div className="w-[70%] flex gap-4 mx-4">{getMyPanelMenuData()}</div>
-      <div className="w-[30%] bg-gradient-to-tr from-orange-100 to-yellow-600 text-center h-fit rounded-xl mr-2">
-        <div className="py-2 text-2xl text-white font-semibold font-serif">
+    <div className="lg:flex items-center 2xl:mt-20 justify-center  xl:gap-4 2xl:gap-0">
+      <div className=" lg:w-[70%] flex gap-4 mx-4 2xl:mx-8 ">
+        {getMyPanelMenuData()}
+      </div>
+      <div className=" mt-10 m-auto w-1/2 lg:m-0  lg:w-[30%] xl:w-[25%] 2xl:w-[30%] bg-gradient-to-tr from-orange-100 to-yellow-600 text-center h-fit rounded-xl lg:mr-2">
+        <div className="py-2 text-2xl text-white 2xl:text-6xl 2xl:py-8 font-semibold font-serif">
           <i>Rankings</i>
         </div>
-        {getRankingRiders()}
+        <div className="2xl:h-contain">{getRankingRiders()}</div>
       </div>
     </div>
   );

@@ -21,3 +21,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@media (min-width: 1536px) {
+  .ranking-rider-container {
+    height: 150px;
+  }
+}
