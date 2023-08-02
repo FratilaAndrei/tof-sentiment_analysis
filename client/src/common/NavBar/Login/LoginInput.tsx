@@ -20,18 +20,18 @@ const LoginInput: FC<LoginInputProps> = ({
   };
 
   return (
-    <div className="w-80 2xl:w-[650px]">
+    <div className="w-80 2xl:w-[350px]">
       <div className="">{inputFieldTitle}</div>
-      <div className="relative 2xl:py-4">
+      <div className="relative 2xl:py-2">
         <input
           type={isPasswordHidden ? inputFieldType : "text"}
           placeholder={inputFieldPlaceholder}
           required
-          className="w-full py-2 flex pl-2 2xl:pl-6 text-black outline-none rounded-md mt-2"
+          className="w-full py-2 flex pl-2 2xl:pl-4 text-black outline-none rounded-md mt-2"
         />
         {inputFieldType === "password" && (
           <div
-            className="absolute -left-8 top-3 text-2xl 2xl:text-6xl 2xl:-left-16 2xl:top-8 "
+            className="absolute -left-8 top-3 text-2xl 2xl:text-4xl 2xl:-left-10 2xl:top-6 "
             onClick={togglePasswordShow}
           >
             {isPasswordHidden ? <AiFillEye /> : <AiFillEyeInvisible />}

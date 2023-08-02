@@ -49,7 +49,7 @@ const Carrousel = () => {
         className="h-full bg-gradient-to-br from-orange-600 to-yellow-500  object-cover rounded-3xl"
       >
         <img src={rider.riderImg} alt="" className="h-[80%] m-auto" />
-        <div className="text-center pt-2 text-xl lg:text-2xl text-white h-[20%] flex flex-col justify-center 2xl:text-4xl">
+        <div className="text-center pt-2 text-xl lg:text-2xl text-white h-[20%] flex flex-col justify-center ">
           {rider.name}
         </div>
       </SwiperSlide>
@@ -59,10 +59,10 @@ const Carrousel = () => {
   return (
     <div className="mt-20 mx-20 h-[450px] 2xl:mt-40 2xl:h-[500px] flex items-center ">
       <Swiper
-        className="h-[350px] 2xl:h-[450px]"
+        className="h-[350px] 2xl:h-[350px]"
         // @ts-ignore
         breakpoints={breakpoints}
-        slidesPerView={3} // Now it should work
+        slidesPerView={5} // Now it should work
         spaceBetween={20}
         autoplay={{
           delay: 3500,

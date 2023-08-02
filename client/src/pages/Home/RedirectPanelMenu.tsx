@@ -83,7 +83,7 @@ const RedirectPanelMenu = () => {
   const getRankingRiders = () => {
     return rankingRiders.map((rider, index) => (
       <div
-        className={`2xl:h-[150px] flex items-center pl-2 text-sm gap-4 py-2 border-b-4 border-orange-500 ${getLastRankingBorder(
+        className={`2xl:h-[100px] flex items-center pl-2 text-sm gap-4 py-2 border-b-4 border-orange-500 ${getLastRankingBorder(
           index
         )}`}
         key={index}
@@ -92,12 +92,12 @@ const RedirectPanelMenu = () => {
           <img src={rider.flag} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="text-center lg:text-start w-[55%]">
-          <div className="font-bold text-sm 2xl:text-4xl">
+          <div className="font-bold text-sm 2xl:text-2xl">
             {rider.riderName}
           </div>
           <div className="line-clamp-1 2xl:text-2xl">{rider.team}</div>
         </div>
-        <div className="w-[35%] 2xl:text-3xl">{rider.timeScore}</div>
+        <div className="w-[35%] 2xl:text-2xl">{rider.timeScore}</div>
       </div>
     ));
   };
@@ -106,12 +106,12 @@ const RedirectPanelMenu = () => {
     return panelMenu.map((panel, index) => (
       <div
         key={index}
-        className="w-1/3 bg-cover h-[300px] 2xl:h-[600px]  text-white text-2xl font-bold pt-4 text-center flex flex-col justify-between  2xl:text-6xl "
+        className="w-1/3 bg-cover h-[300px] 2xl:h-[500px]  text-white text-2xl font-bold pt-4 text-center flex flex-col justify-between 2xl:w-[350px] 2xl:text-4xl  "
         style={{ backgroundImage: `url(${panel.backgroundImage})` }}
       >
         {panel.label}
         <a href={panel.link}>
-          <div className="bg-gradient-to-br from-orange-500 to-yellow-500 mx-4 py-2 mb-4 2xl:text-4xl 2xl:py-4 2xl: opacity-90">
+          <div className="bg-gradient-to-br from-orange-500 to-yellow-500 mx-4 py-2 mb-4 2xl:text-2xl  opacity-90">
             Discover
           </div>
         </a>
@@ -121,11 +121,11 @@ const RedirectPanelMenu = () => {
 
   return (
     <div className="lg:flex items-center 2xl:mt-20 justify-center  xl:gap-4 2xl:gap-0">
-      <div className=" lg:w-[70%] flex gap-4 mx-4 2xl:mx-8 ">
+      <div className=" lg:w-[70%] 2xl:w-[75%] flex gap-4 2xl:gap-8 mx-4 2xl:mx-8 2xl:justify-center ">
         {getMyPanelMenuData()}
       </div>
-      <div className=" mt-10 m-auto w-1/2 lg:m-0  lg:w-[30%] xl:w-[25%] 2xl:w-[30%] bg-gradient-to-tr from-orange-100 to-yellow-600 text-center h-fit rounded-xl lg:mr-2">
-        <div className="py-2 text-2xl text-white 2xl:text-6xl 2xl:py-8 font-semibold font-serif">
+      <div className=" mt-10 m-auto w-1/2 lg:m-0  lg:w-[30%] xl:w-[25%] 2xl:w-[20%] bg-gradient-to-tr from-orange-100 to-yellow-600 text-center h-fit rounded-xl lg:mr-2">
+        <div className="py-2 text-2xl text-white 2xl:text-4xl 2xl:py-4 font-semibold font-serif">
           <i>Rankings</i>
         </div>
         <div className="2xl:h-contain">{getRankingRiders()}</div>

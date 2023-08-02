@@ -12,10 +12,10 @@ const LogIn = () => {
   const loginMenu = isLoginMenuOpen === true;
 
   return (
-    <div className=" text-white bg-orange-500 py-1 px-8 2xl:px-24 2xl:py-4  rounded-md relative z-10">
+    <div className=" text-white bg-orange-500 py-1 px-8 2xl:px-12 2xl:py-2  rounded-md relative z-10">
       <div onClick={toggleLoginMenu}>
-        <IoPersonCircle className="absolute -left-4 -top-0.5 2xl:-top-3 2xl:-left-6 bg-orange-600 text-4xl 2xl:text-8xl rounded-full" />
-        <div className="2xl:text-4xl">Log In</div>
+        <IoPersonCircle className="absolute -left-4 -top-0.5 2xl:-top-0.5 2xl:-left-4 bg-orange-600 text-4xl 2xl:text-5xl rounded-full" />
+        <div className="2xl:text-xl">Log In</div>
       </div>
       {loginMenu && (
         <div>

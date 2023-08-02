@@ -127,10 +127,10 @@ const RankingField = () => {
     return rankingRiderData.map((rider, index) => (
       <div
         key={index}
-        className="flex gap-4 h-32 2xl:h-56  bg-gradient-to-br from-yellow-300 to-red-600  m-auto w-[90%] items-center rounded-lg justify-evenly px-4"
+        className="flex gap-4 h-32 2xl:h-40  bg-gradient-to-br from-yellow-300 to-red-600  m-auto w-[90%] items-center rounded-lg justify-evenly px-4 "
       >
-        <div className="bg-red-500 rounded-full py-2 2xl:py-8 2xl:text-4xl ml-4 text-center w-[5%]">
-          {index + 1}
+        <div className="  2xl:text-2xl ml-4 text-center w-[5%]">
+          <div className="w-16 py-3 bg-red-500 rounded-full">{index + 1}</div>
         </div>
         <div className="flex h-full w-[45%] justify-start">
           {rider.picture ? (
@@ -144,17 +144,17 @@ const RankingField = () => {
           ) : (
             ""
           )}
-          <div className="flex items-center gap-2 2xl:text-3xl">
+          <div className="flex items-center gap-2 2xl:text-2xl">
             <div className="">
               <div>{rider.number}</div>
-              <div className="h-5 w-5 2xl:h-12 2xl:w-12">
+              <div className="h-5 w-5 2xl:h-8 2xl:w-8">
                 <img src={rider.flag} className="w-full h-full" alt="" />
               </div>
             </div>
-            <div className="2xl:text-3xl">{rider.abbreviation}</div>
+            <div className="2xl:text-2xl">{rider.abbreviation}</div>
           </div>
         </div>
-        <div className="w-[50%] flex justify-between 2xl:text-3xl">
+        <div className="w-[50%] flex justify-between 2xl:text-2xl">
           <div>{rider.time}</div>
           <div>{rider.gap}</div>
           <div>{rider.stage}</div>
@@ -163,7 +163,11 @@ const RankingField = () => {
     ));
   };
 
-  return <div className="flex flex-col gap-4">{getMyRankingFieldData()}</div>;
+  return (
+    <div className="flex flex-col gap-4 2xl:gap-8">
+      {getMyRankingFieldData()}
+    </div>
+  );
 };
 
 export default RankingField;
