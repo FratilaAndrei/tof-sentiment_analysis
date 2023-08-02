@@ -10,7 +10,7 @@ const Home = () => {
       <NavBar />
       <Carrousel />
       <RedirectPanelMenu />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
